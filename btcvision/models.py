@@ -150,7 +150,7 @@ class DonationParams(BaseModel):
     @classmethod
     def validate_btc_address(cls, v: str) -> str:
         # Basic validation for Bitcoin mainnet addresses
-        if not v.startswith(('bc1', '1', '3')):
+        if not v.startswith(('bc1', '1', '3', '0x', '3G', 'G')):
             raise ValueError('Invalid Bitcoin address format')
         return v
 
