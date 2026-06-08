@@ -1,0 +1,45 @@
+# BTCVision — Agent Domain Verification
+# Place at: /.well-known/agent-verification.txt
+# This file proves domain ownership to agent registries and crawlers.
+
+Site: BTCVision
+Domains:
+  - btcvision.org
+  - btcvision.netlify.app
+Manifest-Version: 1.0.0
+Issued: 2026-06-07T12:56:00Z
+Expires: 2027-06-07T12:56:00Z
+
+# ---- DOMAIN OWNERSHIP CHALLENGE ----
+# Registries may issue a random challenge token. Place it below to
+# prove control of the domain.
+Challenge-Token: REPLACE_WITH_REGISTRY_ISSUED_TOKEN
+Challenge-Signature: REPLACE_WITH_ED25519_SIGNATURE_OF_TOKEN
+
+# ---- ED25519 PUBLIC KEY ----
+# All manifest files are signed with the private key matching this
+# public key. Agents can verify the manifests are not tampered with.
+Public-Key: ed25519:ed25519:u2FD2RGD4Kyz394VnFKeDZWgE8uXrHjubwOaqnv1koE=
+Key-Id: REPLACE_WITH_KEY_ID
+Created-At: 2026-06-07T12:56:00Z
+
+# ---- CONTACT ----
+Contact: agents@btcvision.org
+Abuse: abuse@btcvision.org
+Security: security@btcvision.org
+
+# ---- DISCOVERY ENDPOINTS ----
+Manifest-URL: https://btcvision.org/.well-known/agent.json
+Trust-URL: https://btcvision.org/.well-known/agent-trust.json
+OpenClaw-URL: https://btcvision.org/.well-known/openclaw.yaml
+Federation-URL: https://btcvision.org/.well-known/agent-federation.json
+LLMs-URL: https://btcvision.org/llms.txt
+
+# ---- POLICY ----
+Data-Collection: none
+Tracking: none
+User-Tracking: none
+Third-Party-Scripts: none
+Agent-Policy: opt-in-only
+Redistribution: allowed-with-attribution
+License: MIT

@@ -1,0 +1,79 @@
+# BTCVision AI Agent Bridge - Configuration
+# نسخة محدّثة مع Supabase + Telegram + Multi-coin
+
+btcvision:
+  donation_address: "bc1qtpuhwl0vnhrch5p7e5469q2ed66hlyyvh8rtsn"
+  default_amount_sats: 21000
+  max_donation_sats: 1000000
+  rate_limit_per_session: 5
+  manifest_url: "https://btcvision.org/.well-known/agent.json"
+  trust_registry_url: "https://btcvision.org/.well-known/agent-trust.json"
+
+# عناوين التبرع متعددة العملات
+donation_addresses:
+  BTC: "bc1qtpuhwl0vnhrch5p7e5469q2ed66hlyyvh8rtsn"
+  ETH: "0xf03b429d4d85896a46dd7a64b5a8ab9f0bbb4ced"
+  BNB: "0xf03b429d4d85896a46dd7a64b5a8ab9f0bbb4ced"
+  SOL: "3G5UZHFYN8hbv3aTZt6Lr7qqx4FTTkAyLJq34HjQLraz"
+
+# Supabase
+supabase:
+  url: "https://dcemgonadsuwwagyaahu.supabase.co"
+  anon_key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRjZW1nb25hZHN1d3dhZ3lhYWh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgxNzI4MjYsImV4cCI6MjA2Mzc0ODgyNn0.NRf_9Kn8RJgRyuZeHMFcBhGMjoWnUtT7ria1IaVJpCg"
+
+# Telegram
+telegram:
+  bot_token: "7830588490:AAFgEYx78OsHYjIY7b-7VkW8cOKT4SHW1Dc"
+  chat_ids:
+    - "446628442"
+    - "@Btcvisionanalysebot"
+
+security:
+  require_signature_verification: true
+  require_proof_of_intent: true
+  min_trust_score: 0.5
+  enable_defense_layer: true
+  block_unknown_agents: false
+  strict_mode: true
+
+protocol:
+  version: "1.0.0"
+  max_latency_ms: 150
+  enable_streaming: true
+  enable_stateful: true
+  discovery_mode: "hybrid"
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+  enable_tls: true
+  cors_origins:
+    - "*"
+  request_timeout: 30
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null
+
+agents:
+  default:
+    did: "did:btc:bridge-btcvision"
+    name: "BTCVision Bridge Agent"
+    capabilities:
+      - "donation_coordination"
+      - "wallet_integration"
+      - "agent_discovery"
+      - "security_validation"
+      - "multi_coin_support"
+    max_latency_ms: 150
+
+defense:
+  block_patterns:
+    - "ignore.*previous"
+    - "forget.*everything"
+    - "new.*system.*prompt"
+    - "override.*instructions"
+  min_confidence_threshold: 0.7
+  check_unicode: true
+  check_mixed_languages: true
