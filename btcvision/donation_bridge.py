@@ -35,7 +35,7 @@ SUPABASE_URL = "https://dcemgonadsuwwagyaahu.supabase.co"
 SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRjZW1nb25hZHN1d3dhZ3lhYWh1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgxNzI4MjYsImV4cCI6MjA2Mzc0ODgyNn0.NRf_9Kn8RJgRyuZeHMFcBhGMjoWnUtT7ria1IaVJpCg"
 
 # Telegram
-TELEGRAM_BOT_TOKEN = "7830588490:AAFgEYx78OsHYjIY7b-7VkW8cOKT4SHW1Dc"
+TELEGRAM_BOT_TOKEN = "8927812046:AAHdEkFO4K1-7Q_01gROaThVbUtqihWaF4Y"
 TELEGRAM_CHAT_IDS = [
     "446628442",          # Chat ID شخصي
     "@Btcvisionanalysebot"  # البوت
