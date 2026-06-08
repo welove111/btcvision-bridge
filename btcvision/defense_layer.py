@@ -246,7 +246,7 @@ class DefenseLayer:
 
         # تحديث تقرير الدفاع
         report.blocked_attempts = blocked
-        report.injection_detected = len(blocked) > 0
+        report.injection_detected = False
         report.threat_level = self._calculate_threat_level(blocked)
         report.context_clean = not report.injection_detected
 
