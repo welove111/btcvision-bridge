@@ -43,7 +43,8 @@ TELEGRAM_CHAT_IDS = [
 
 # عناوين التبرع متعددة العملات
 DONATION_ADDRESSES = {
-    "BTC":  "welove@blink.sv",
+    "BTC": "bc1qtpuhwl0vnhrch5p7e5469q2ed66hlyyvh8rtsn",
+    "LIGHTNING": "welove@blink.sv",
     "ETH":  "0xf03b429d4d85896a46dd7a64b5a8ab9f0bbb4ced",
     "BNB":  "0xf03b429d4d85896a46dd7a64b5a8ab9f0bbb4ced",
     "SOL":  "3G5UZHFYN8hbv3aTZt6Lr7qqx4FTTkAyLJq34HjQLraz",
