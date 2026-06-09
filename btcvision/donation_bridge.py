@@ -337,7 +337,7 @@ class DonationBridge:
                 "prompt":               prompt,
                 "coin":                 coin,
                 "address":              address,
-                "amount_sats":          amount,
+                "amount_sats": amount, "unit": {"BTC":"sats","ETH":"ETH","BNB":"BNB","SOL":"SOL"}.get(coin,"sats"),
                 "rate_limit_remaining": self.rate_limiter.get_remaining(session_id)
             },
             consent_required=True,
