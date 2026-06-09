@@ -392,7 +392,7 @@ class DonationBridge:
                 f"✅ <b>BTCVision — موافقة تبرع جديدة</b>\n"
                 f"العملة: <b>{request.coin}</b>\n"
                 f"العنوان: <code>{request.recipient_address}</code>\n"
-                f"المبلغ: <b>{request.amount_sats} {{'BTC':'sats','ETH':'ETH','BNB':'BNB','SOL':'SOL'}.get(request.coin,'sats')}</b>\n"
+                f"المبلغ: <b>{request.amount_sats} {'sats' if request.coin == 'BTC' else request.coin}</b>\n"
                 f"Session: <code>{session_id[:12]}...</code>\n"
                 f"الوقت: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC"
             )
@@ -476,7 +476,7 @@ class DonationBridge:
                 f"💰 <b>BTCVision — تنفيذ تبرع</b>\n"
                 f"العملة: <b>{request.coin}</b>\n"
                 f"العنوان: <code>{request.recipient_address}</code>\n"
-                f"المبلغ: <b>{request.amount_sats} {{'BTC':'sats','ETH':'ETH','BNB':'BNB','SOL':'SOL'}.get(request.coin,'sats')}</b>\n"
+                f"المبلغ: <b>{request.amount_sats} {'sats' if request.coin == 'BTC' else request.coin}</b>\n"
                 f"TX ID: <code>{result.get('tx_id', 'N/A')}</code>\n"
                 f"الوقت: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC"
             )
