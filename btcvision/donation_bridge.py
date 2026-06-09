@@ -43,7 +43,7 @@ TELEGRAM_CHAT_IDS = [
 
 # عناوين التبرع متعددة العملات
 DONATION_ADDRESSES = {
-    "BTC":  "bc1qtpuhwl0vnhrch5p7e5469q2ed66hlyyvh8rtsn",
+    "BTC":  "welove@blink.sv",
     "ETH":  "0xf03b429d4d85896a46dd7a64b5a8ab9f0bbb4ced",
     "BNB":  "0xf03b429d4d85896a46dd7a64b5a8ab9f0bbb4ced",
     "SOL":  "3G5UZHFYN8hbv3aTZt6Lr7qqx4FTTkAyLJq34HjQLraz",
@@ -391,7 +391,7 @@ class DonationBridge:
                 f"✅ <b>BTCVision — موافقة تبرع جديدة</b>\n"
                 f"العملة: <b>{request.coin}</b>\n"
                 f"العنوان: <code>{request.recipient_address}</code>\n"
-                f"المبلغ: <b>{request.amount_sats} sats</b>\n"
+                f"المبلغ: <b>{request.amount_sats} {{'BTC':'sats','ETH':'ETH','BNB':'BNB','SOL':'SOL'}.get(request.coin,'sats')}</b>\n"
                 f"Session: <code>{session_id[:12]}...</code>\n"
                 f"الوقت: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC"
             )
@@ -475,7 +475,7 @@ class DonationBridge:
                 f"💰 <b>BTCVision — تنفيذ تبرع</b>\n"
                 f"العملة: <b>{request.coin}</b>\n"
                 f"العنوان: <code>{request.recipient_address}</code>\n"
-                f"المبلغ: <b>{request.amount_sats} sats</b>\n"
+                f"المبلغ: <b>{request.amount_sats} {{'BTC':'sats','ETH':'ETH','BNB':'BNB','SOL':'SOL'}.get(request.coin,'sats')}</b>\n"
                 f"TX ID: <code>{result.get('tx_id', 'N/A')}</code>\n"
                 f"الوقت: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} UTC"
             )
